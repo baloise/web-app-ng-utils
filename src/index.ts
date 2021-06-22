@@ -2,6 +2,8 @@
 import { NgModule } from '@angular/core'
 import { BalTestService } from './service'
 
+export { BalTestService } from './service'
+
 @NgModule({
   imports: [],
   providers: [BalTestService],
