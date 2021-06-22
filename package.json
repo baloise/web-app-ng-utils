@@ -3,21 +3,16 @@
   "version": "0.0.0",
   "description": "Utilities for Baloise Web Applications made with Angular",
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watchAll",
-    "build": "npm run build:clean && npm run build:compile && npm run build:bundle",
-    "build:clean": "rimraf dist && rimraf dist-transpiled",
-    "build:compile": "tsc -p .",
-    "build:bundle": "rollup --config rollup.config.js",
     "lint": "eslint src --ext .ts,vue",
     "format": "npm run prettier:write",
     "prettier:write": "prettier --write \"./src\"",
     "prettier:check": "prettier --check \"./src\"",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "build": "npm run clean && npm run build:compile && npm run clean:package",
+    "build:compile": "ng-packagr -p package.json",
+    "clean": "rimraf dist",
+    "clean:package": "rimraf dist/package.json && rimraf dist/CHANGELOG.md && rimraf dist/LICENSE && rimraf dist/README.md"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.esm.js",
-  "types": "./dist/types/index.d.ts",
   "files": [
     "dist/"
   ],
@@ -34,7 +29,20 @@
     "url": "https://github.com/baloise/web-app-ng-utils/issues"
   },
   "homepage": "https://github.com/baloise/web-app-ng-utils#readme",
+  "peerDependencies": {
+    "@angular/common": ">=10.2.4",
+    "@angular/core": ">=10.2.4",
+    "@angular/forms": ">=10.2.4",
+    "@angular/platform-browser": ">=10.2.4",
+    "zone.js": ">=0.8.26"
+  },
   "devDependencies": {
+    "@angular/common": "^10.2.5",
+    "@angular/compiler": "^10.2.5",
+    "@angular/compiler-cli": "^10.2.5",
+    "@angular/core": "^10.2.5",
+    "@angular/forms": "^10.2.5",
+    "@angular/platform-browser": "^10.2.5",
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
     "@semantic-release/changelog": "^5.0.1",
@@ -49,12 +57,14 @@
     "eslint-plugin-prettier": "^3.4.0",
     "husky": "^6.0.0",
     "jest": "^26.6.3",
+    "ng-packagr": "^10.1.2",
     "prettier": "^2.3.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.47.0",
     "semantic-release": "^17.4.2",
     "ts-jest": "^26.5.6",
-    "typescript": "^4.2.4"
+    "typescript": "^4.0.8",
+    "zone.js": "^0.10.3"
   },
   "husky": {
     "hooks": {
@@ -64,6 +74,30 @@
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
+    ]
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "main": "dist/bundles/baloise-web-app-ng-utils.umd.js",
+  "module": "dist/fesm2015/baloise-web-app-ng-utils.js",
+  "es2015": "dist/fesm2015/baloise-web-app-ng-utils.js",
+  "esm2015": "dist/esm2015/baloise-web-app-ng-utils.js",
+  "fesm2015": "dist/fesm2015/baloise-web-app-ng-utils.js",
+  "typings": "dist/baloise-web-app-ng-utils.d.ts",
+  "metadata": "dist/baloise-web-app-ng-utils.metadata.json",
+  "sideEffects": false,
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "ngPackage": {
+    "lib": {
+      "entryFile": "src/index.ts",
+      "umdModuleIds": {
+        "@baloise/design-system-components": "@baloise/design-system-components",
+        "@baloise/design-system-components/loader": "@baloise/design-system-components/loader"
+      }
+    },
+    "whitelistedNonPeerDependencies": [
+      "@baloise/design-system-components"
     ]
   }
 }
