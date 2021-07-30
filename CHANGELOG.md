@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/baloise/web-app-ng-utils/compare/v1.0.0...v1.0.1) (2021-07-30)
+
+
+### Bug Fixes
+
+* export models ([a73c5cc](https://github.com/baloise/web-app-ng-utils/commit/a73c5cc71f51b7e84b0827348e81a20be7fa0a40))
+
 # 1.0.0 (2021-07-30)
 
 
