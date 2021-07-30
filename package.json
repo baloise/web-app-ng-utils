@@ -34,6 +34,11 @@
     "@angular/core": ">=10.2.4",
     "@angular/forms": ">=10.2.4",
     "@angular/platform-browser": ">=10.2.4",
+    "@angular/router": ">=10.2.4",
+    "@baloise/design-system-components-angular": ">=1.6.2",
+    "ag-grid-community": ">=25.3.0",
+    "lodash": ">=4.17.21",
+    "query-string": ">=7.0.1",
     "zone.js": ">=0.8.26"
   },
   "devDependencies": {
@@ -43,6 +48,8 @@
     "@angular/core": "^10.2.5",
     "@angular/forms": "^10.2.5",
     "@angular/platform-browser": "^10.2.5",
+    "@angular/router": "^10.2.5",
+    "@baloise/design-system-components-angular": "^1.6.2",
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
     "@semantic-release/changelog": "^5.0.1",
@@ -52,13 +59,16 @@
     "@types/jest": "^26.0.23",
     "@typescript-eslint/eslint-plugin": "^4.24.0",
     "@typescript-eslint/parser": "^4.24.0",
+    "ag-grid-community": "^25.3.0",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "husky": "^6.0.0",
     "jest": "^26.6.3",
+    "lodash": "^4.17.21",
     "ng-packagr": "^10.1.2",
     "prettier": "^2.3.0",
+    "query-string": "^7.0.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.47.0",
     "semantic-release": "^17.4.2",
@@ -93,7 +103,10 @@
       "entryFile": "src/index.ts",
       "umdModuleIds": {
         "@baloise/design-system-components": "@baloise/design-system-components",
-        "@baloise/design-system-components/loader": "@baloise/design-system-components/loader"
+        "@baloise/design-system-components/loader": "@baloise/design-system-components/loader",
+        "@baloise/design-system-components-angular": "@baloise/design-system-components-angular",
+        "lodash": "lodash",
+        "query-string": "queryString"
       }
     },
     "whitelistedNonPeerDependencies": [

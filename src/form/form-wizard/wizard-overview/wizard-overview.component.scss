@@ -1,0 +1,72 @@
+@import "node_modules/@baloise/design-system-components/src/styles/global.utilities.scss";
+
+.clickable {
+  cursor: pointer;
+}
+.form-navigation {
+  display: flex;
+  height: 120px;
+  border-bottom: solid $blue-line 1px;
+  justify-content: center;
+
+  .step {
+    display: flex;
+    width: 240px;
+    border: solid $blue-line 1px;
+    border-bottom: none;
+    align-items: center;
+    justify-content: center;
+
+    .done,
+    .not-done {
+      display: flex;
+      @include tablet() {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .text {
+        margin-left: 8px;
+        display: flex;
+        align-items: center;
+        @include tablet() {
+          display: none;
+        }
+      }
+    }
+
+    &.active {
+      .done,
+      .not-done {
+        .text {
+          @include tablet() {
+            display: flex;
+          }
+          @include mobile() {
+            display: none;
+          }
+        }
+      }
+    }
+    // TODO CIP-429: move to global class
+    .circle {
+      display: flex;
+      border-radius: 50%;
+      border: solid $blue 1px;
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: $size-7;
+      color: $blue;
+    }
+    &.active {
+      border-bottom: solid $blue-light-hover 2px;
+    }
+    p {
+      font-size: $size-6;
+    }
+  }
+}

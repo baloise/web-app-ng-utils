@@ -1,0 +1,14 @@
+@import "node_modules/@baloise/design-system-components/src/styles/global.utilities.scss";
+
+:host {
+  display: block;
+  margin-top: 60px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  .header {
+    font-size: $size-2;
+  }
+}
