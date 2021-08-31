@@ -1,4 +1,4 @@
-import { GtmEvent } from "../models/gtm.model";
+import { GtmEvent } from "@baloise/web-app-google-utils";
 import { Option } from "../models/option.model";
 import { TooltipContent } from "../models/tooltip.model";
 
