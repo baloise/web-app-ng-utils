@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/baloise/web-app-ng-utils/compare/v1.0.1...v1.1.0) (2021-08-31)
+
+
+### Features
+
+* moved gtm.model to @baloise/web-app-google-utils ([50e10d6](https://github.com/baloise/web-app-ng-utils/commit/50e10d6dfb373647fdc849dfca41ae9bed296581))
+
 ## [1.0.1](https://github.com/baloise/web-app-ng-utils/compare/v1.0.0...v1.0.1) (2021-07-30)
 
 
