@@ -1,6 +1,6 @@
 {
   "name": "@baloise/web-app-ng-utils",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Utilities for Baloise Web Applications made with Angular",
   "scripts": {
     "lint": "eslint src --ext .ts,vue",

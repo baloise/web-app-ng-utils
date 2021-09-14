@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/baloise/web-app-ng-utils/compare/v1.1.0...v1.2.0) (2021-09-14)
+
+
+### Features
+
+* **google:** add missing google directives for click and focus ([acb7e73](https://github.com/baloise/web-app-ng-utils/commit/acb7e73381cd599c4fed20447285d57517d2d6c0))
+
 # [1.1.0](https://github.com/baloise/web-app-ng-utils/compare/v1.0.1...v1.1.0) (2021-08-31)
 
 
