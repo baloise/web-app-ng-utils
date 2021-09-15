@@ -12,6 +12,10 @@
   },
   "exclude": ["src/test.ts", "**/*.spec.ts"],
   "angularCompilerOptions": {
-    "compilationMode": "partial"
+    "compilationMode": "partial",
+    "skipTemplateCodegen": true,
+    "strictMetadataEmit": true,
+    "enableResourceInlining": true,
+    "fullTemplateTypeCheck": true
   }
 }
