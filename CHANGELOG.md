@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/baloise/web-app-ng-utils/compare/v1.2.0...v1.2.1) (2021-09-15)
+
+
+### Bug Fixes
+
+* **angular:** try new export ([bedbc05](https://github.com/baloise/web-app-ng-utils/commit/bedbc050c7abc19592d0ecac48ef62b1b18cd078))
+
 # [1.2.0](https://github.com/baloise/web-app-ng-utils/compare/v1.1.0...v1.2.0) (2021-09-14)
 
 
