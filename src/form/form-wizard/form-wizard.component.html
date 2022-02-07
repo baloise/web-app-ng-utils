@@ -1,6 +1,8 @@
 <bal-wizard-overview
   [steps]="steps"
   [activeStep]="activeStep"
+  [disableStepsAfterActiveStep]="disableStepsAfterActiveStep"
+  (clickOnStep)="onClickOnStep($event)"
   *ngIf="shouldShowStepOverview()"
 >
 </bal-wizard-overview>
