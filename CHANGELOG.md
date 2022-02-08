@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/baloise/web-app-ng-utils/compare/v1.2.1...v1.3.0) (2022-02-08)
+
+
+### Features
+
+* remove ng-packgr ([3eda91d](https://github.com/baloise/web-app-ng-utils/commit/3eda91de14d235dfb70018c546fc7299774e851c))
+
 # [1.2.0](https://github.com/baloise/web-app-ng-utils/compare/v1.1.0...v1.2.0) (2021-09-14)
 
 
