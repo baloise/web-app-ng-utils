@@ -41,6 +41,8 @@ export class FormWizardComponent
       save: string;
     };
   };
+  @Input() disableStepsAfterActiveStep = false;
+  @Input() enableDirectNavigationBackward = false;
 
   @Output() beforeNavigateForward = new EventEmitter<WizardStep>();
   @Output() navigateForward = new EventEmitter<WizardStep>();
@@ -275,5 +277,14 @@ export class FormWizardComponent
   private getActiveStepIndex(): number {
     const index = this.steps.indexOf(this.activeStep);
     return index >= 0 ? index : 0;
+  }
+
+  onClickOnStep(clickedStep: WizardStep): void {
+    if (!this.enableDirectNavigationBackward || this.steps.indexOf(clickedStep) > this.steps.indexOf(this.activeStep)) {
+      return;
+    }
+    // enable direct backward navigation
+    this.activeStep = clickedStep;
+    this.showActiveStepComponent();
   }
 }

@@ -62,6 +62,16 @@
       font-size: $size-7;
       color: $blue;
     }
+    &.disabled {
+      h5 {
+        color: $text-light;
+      }
+
+      &.step .circle {
+        border: solid $text-light 1px;
+        color: $text-light;
+      }
+    }
     &.active {
       border-bottom: solid $blue-light-hover 2px;
     }

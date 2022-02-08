@@ -9,6 +9,7 @@ import { WizardStep } from '../models';
 export class WizardOverviewComponent implements OnInit {
   @Input() activeStep!: WizardStep;
   @Input() steps: WizardStep[] = [];
+  @Input() disableStepsAfterActiveStep = false;
 
   @Output() clickOnStep: EventEmitter<WizardStep> =
     new EventEmitter<WizardStep>();
@@ -32,5 +33,9 @@ export class WizardOverviewComponent implements OnInit {
 
   isActive(step: WizardStep): boolean {
     return this.steps.indexOf(step) === this.steps.indexOf(this.activeStep);
+  }
+
+  shouldMarkAsDisabled(step: WizardStep): boolean {
+    return this.disableStepsAfterActiveStep && this.steps.indexOf(step) > this.steps.indexOf(this.activeStep);
   }
 }

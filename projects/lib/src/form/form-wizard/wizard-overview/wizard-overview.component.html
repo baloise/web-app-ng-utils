@@ -5,7 +5,8 @@
     (click)="clickOnStep.emit(step)"
     [ngClass]="{
       active: isActive(step),
-      clickable: thereIsSubscriptionOnStepClick
+      clickable: thereIsSubscriptionOnStepClick,
+      disabled: shouldMarkAsDisabled(step)
     }"
   >
     <div class="done" *ngIf="isDone(step)">
