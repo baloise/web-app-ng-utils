@@ -1,0 +1,13 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/lib",
+  "lib": {
+    "entryFile": "src/public-api.ts",
+    "umdModuleIds": {
+      "query-string": "query-string",
+      "lodash": "lodash",
+      "@baloise/design-system-components-angular": "@baloise/design-system-components-angular",
+      "@baloise/web-app-google-utils": "@baloise/web-app-google-utils"
+    }
+  }
+}
