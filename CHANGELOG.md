@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/baloise/web-app-ng-utils/compare/v1.3.1...v1.3.2) (2022-02-08)
+
+
+### Bug Fixes
+
+* add package-lock.json trigger relase to make same version of git tag and npm ([9572bda](https://github.com/baloise/web-app-ng-utils/commit/9572bda28b4bbff049af6e3b697c3650bd9fc976))
+
 ## [1.3.1](https://github.com/baloise/web-app-ng-utils/compare/v1.3.0...v1.3.1) (2022-02-08)
 
 
