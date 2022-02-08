@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/baloise/web-app-ng-utils/compare/v1.3.0...v1.3.1) (2022-02-08)
+
+
+### Bug Fixes
+
+* fix version of lib ([a3206a4](https://github.com/baloise/web-app-ng-utils/commit/a3206a42535087f3b1f32a6fd4fc621db31a8700))
+
 # [1.3.0](https://github.com/baloise/web-app-ng-utils/compare/v1.2.1...v1.3.0) (2022-02-08)
 
 
