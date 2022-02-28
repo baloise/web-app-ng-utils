@@ -1,6 +1,20 @@
 {
+  "version": "2.0.0-alpha.0",
   "packages": [
-    "packages/*"
+    "projects/lib"
   ],
-  "version": "0.0.1"
+  "command": {
+    "version": {
+      "message": "chore(release): %s",
+      "allowBranch": "master",
+      "conventionalCommits": true,
+      "changelogPreset": "conventionalcommits",
+      "createRelease": "github",
+      "exact": true,
+      "forcePublish": true
+    },
+    "publish": {
+      "tempTag": true
+    }
+  }
 }

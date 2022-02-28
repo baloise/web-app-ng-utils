@@ -2,6 +2,7 @@
 
 # Compiled output
 /dist
+/dist-demo
 /tmp
 /out-tsc
 /bazel-out
@@ -40,3 +41,8 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Husky
+.husky/_/
+
+projects/demo/src/assets/fonts

@@ -1,0 +1,66 @@
+<section class="mt-5">
+  <bal-card>
+    <bal-card-content>
+      <bal-form-wizard
+        *ngIf="submittedData == null"
+        [steps]="steps"
+        [labels]="{
+          button: {
+            previous: 'Back',
+            next: 'Forward',
+            save: 'Save'
+          }
+        }"
+        [isSubmitting]="isSubmitting"
+        [startingStep]="steps[0]"
+        [disableStepsAfterActiveStep]="true"
+        (beforeNavigateForward)="onBeforeNavigateForward()"
+        (navigateForward)="onNavigateForward($event)"
+        (navigateBackward)="onNavigateBackward($event)"
+        (navigationFailed)="onNavigationFailed()"
+        (submitForm)="submitForm($event)"
+      >
+        <bal-wizard-step [name]="steps[0].name">
+          <div *ngIf="isStep(0)">
+            <form [formGroup]="steps[0].form" novalidate class="columns is-multiline mt-0">
+              <bal-field class="column is-full py-0" required>
+                <bal-field-label>Firstname</bal-field-label>
+                <bal-field-control>
+                  <bal-input [formControlName]="firstName" placeholder="Enter your firstname"></bal-input>
+                </bal-field-control>
+                <bal-field-message color="danger">
+                  <bal-ng-error controlName="firstName" error="required">This field is required</bal-ng-error>
+                </bal-field-message>
+              </bal-field>
+              <bal-field class="column is-full py-0" required>
+                <bal-field-label>Lastname</bal-field-label>
+                <bal-field-control>
+                  <bal-input [formControlName]="lastName" placeholder="Enter your lastName"></bal-input>
+                </bal-field-control>
+                <bal-field-message color="danger">
+                  <bal-ng-error controlName="lastName" error="required">This field is required</bal-ng-error>
+                </bal-field-message>
+              </bal-field>
+            </form>
+          </div>
+        </bal-wizard-step>
+
+        <bal-wizard-step [name]="steps[1].name">
+          <div *ngIf="isStep(1)">
+            <form [formGroup]="steps[1].form" novalidate class="columns is-multiline mt-0">
+              <bal-field class="column is-full py-0" required>
+                <bal-field-label>Street</bal-field-label>
+                <bal-field-control>
+                  <bal-input [formControlName]="street" placeholder="Enter your street"></bal-input>
+                </bal-field-control>
+                <bal-field-message color="danger">
+                  <bal-ng-error controlName="street" error="required">This field is required</bal-ng-error>
+                </bal-field-message>
+              </bal-field>
+            </form>
+          </div>
+        </bal-wizard-step>
+      </bal-form-wizard>
+    </bal-card-content>
+  </bal-card>
+</section>

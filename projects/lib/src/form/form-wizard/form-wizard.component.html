@@ -1,0 +1,26 @@
+<bal-wizard-overview
+  [steps]="steps"
+  [activeStep]="activeStep"
+  [disableStepsAfterActiveStep]="disableStepsAfterActiveStep"
+  (clickOnStep)="onClickOnStep($event)"
+  *ngIf="shouldShowStepOverview()"
+>
+</bal-wizard-overview>
+​
+<ng-content></ng-content>
+​
+<bal-button-group *ngIf="shouldShowNavigationButtons()">
+  <bal-button color="link" data-test-id="back-button" *ngIf="shouldShowBackButton()" (click)="onClickPrevious()">
+    {{ labels.button.previous }}
+  </bal-button>
+  ​
+  <bal-button
+    color="primary"
+    data-test-id="next-button"
+    [disabled]="shouldDisableNextButton()"
+    [loading]="isSubmitting"
+    (click)="onClickNext()"
+  >
+    {{ isLastStep() ? labels.button.save : labels.button.next }}
+  </bal-button>
+</bal-button-group>
