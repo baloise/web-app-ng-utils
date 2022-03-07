@@ -2,11 +2,11 @@
   "name": "@baloise/web-app-ng-utils",
   "version": "2.0.0",
   "peerDependencies": {
-    "@angular/common": "^13.1.0",
-    "@angular/core": "^13.1.0",
-    "@angular/form": "^13.1.0",
-    "@baloise/design-system-components-angular": "^10.2.0",
-    "@baloise/web-app-google-utils": "^1.2.0"
+    "@angular/common": ">=12.0.0",
+    "@angular/core": ">=12.0.0",
+    "@angular/form": ">=12.0.0",
+    "@baloise/design-system-components-angular": ">=10.2.0",
+    "@baloise/web-app-google-utils": ">=1.2.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
