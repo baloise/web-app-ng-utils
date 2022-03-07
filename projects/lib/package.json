@@ -4,7 +4,7 @@
   "peerDependencies": {
     "@angular/common": ">=12.0.0",
     "@angular/core": ">=12.0.0",
-    "@angular/form": ">=12.0.0",
+    "@angular/forms": ">=12.0.0",
     "@baloise/design-system-components-angular": ">=10.2.0",
     "@baloise/web-app-google-utils": ">=1.2.0"
   },
