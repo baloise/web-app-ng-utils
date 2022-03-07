@@ -65,7 +65,7 @@
               "projects/demo/src/styles.scss"
             ],
             "allowedCommonJsDependencies": [
-              "querystring"
+              "query-string"
            ],
             "scripts": []
           },
