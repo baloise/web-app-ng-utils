@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.0.4](https://github.com/baloise/web-app-ng-utils/compare/v2.0.3...v2.0.4) (2022-03-08)
+
+
+### Bug Fixes
+
+* **form:** set option generic to unkown ([1c382e6](https://github.com/baloise/web-app-ng-utils/commit/1c382e603d8dce21b97513477985ef2d01a94737))
+
+
+
 ### [2.0.3](https://github.com/baloise/web-app-ng-utils/compare/v2.0.2...v2.0.3) (2022-03-07)
 
 **Note:** Version bump only for package @baloise/web-app-ng-utils
