@@ -2,7 +2,7 @@ import { GtmEvent } from '@baloise/web-app-google-utils'
 import { Option } from '../models/option.model'
 import { TooltipContent } from '../models/tooltip.model'
 
-export interface FormControlConfig<O> {
+export interface FormControlConfig<O = unknown> {
   name?: string
   label?: string
   maxSize?: number
