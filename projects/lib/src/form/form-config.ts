@@ -6,8 +6,8 @@ export interface FormControlConfig<O = unknown> {
   name?: string
   label?: string
   maxSize?: number
-  minValue?: number
-  maxValue?: number
+  minValue?: any
+  maxValue?: any
   visible?: boolean
   required?: boolean
   multiSelect?: boolean
