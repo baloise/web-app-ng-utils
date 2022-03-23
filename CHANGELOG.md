@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.0.5](https://github.com/baloise/web-app-ng-utils/compare/v2.0.4...v2.0.5) (2022-03-23)
+
+
+### Bug Fixes
+
+* **form:** use any for max and  min value ([df0876b](https://github.com/baloise/web-app-ng-utils/commit/df0876be2dec994ff35801a624bbe5b8e17eb80f))
+
+
+
 ### [2.0.4](https://github.com/baloise/web-app-ng-utils/compare/v2.0.3...v2.0.4) (2022-03-08)
 
 
