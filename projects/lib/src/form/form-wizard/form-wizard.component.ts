@@ -109,6 +109,12 @@ export class FormWizardComponent implements OnInit, OnChanges, AfterContentInit,
     return (this.activeStepIsLastStep() && !this.form.valid) || this.isSubmitting
   }
 
+  goForwardForce(): void {
+    this.beforeNavigateForward.emit(this.activeStep)
+    this.goForwardWithoutValidation()
+    this.navigateForward.emit(this.activeStep)
+  }
+
   goForward(): void {
     this.beforeNavigateForward.emit(this.activeStep)
     const formWrapper = new BalFormWrapper(this.form)
