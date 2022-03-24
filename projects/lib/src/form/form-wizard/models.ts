@@ -8,7 +8,7 @@ export interface WizardStep {
   enabled: boolean
   navigation: boolean
   isDone?: boolean
-  form: FormGroup
+  form?: FormGroup
 }
 
 @Injectable()

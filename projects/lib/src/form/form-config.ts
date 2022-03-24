@@ -2,7 +2,7 @@ import { GtmEvent } from '@baloise/web-app-google-utils'
 import { Option } from '../models/option.model'
 import { TooltipContent } from '../models/tooltip.model'
 
-export interface FormControlConfig<O = unknown> {
+export interface FormControlConfig {
   name?: string
   label?: string
   maxSize?: number
@@ -14,7 +14,7 @@ export interface FormControlConfig<O = unknown> {
   step: number
   placeholder?: string
   tooltip?: TooltipContent
-  options?: Option<O>[]
+  options?: Option<any>[]
   gtm?: GtmEvent
   validation?: {
     [validationErrorType: string]: string
@@ -25,5 +25,5 @@ export interface FormControlConfig<O = unknown> {
 }
 
 export interface FormConfig {
-  [name: string]: FormControlConfig<unknown>
+  [name: string]: FormControlConfig
 }
