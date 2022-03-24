@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.0.7](https://github.com/baloise/web-app-ng-utils/compare/v2.0.6...v2.0.7) (2022-03-24)
+
+
+### Bug Fixes
+
+* **form:** adjust types ([c5d58a7](https://github.com/baloise/web-app-ng-utils/commit/c5d58a783cedd45d23fda1369080b719cc46a07a))
+
+
+
 ### [2.0.6](https://github.com/baloise/web-app-ng-utils/compare/v2.0.5...v2.0.6) (2022-03-23)
 
 **Note:** Version bump only for package root
