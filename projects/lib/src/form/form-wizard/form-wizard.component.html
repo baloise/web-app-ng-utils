@@ -9,7 +9,7 @@
 ​
 <ng-content></ng-content>
 ​
-<bal-button-group *ngIf="shouldShowNavigationButtons()">
+<bal-button-group *ngIf="shouldShowNavigationButtons()" position="right">
   <bal-button color="link" data-test-id="back-button" *ngIf="shouldShowBackButton()" (click)="onClickPrevious()">
     {{ labels.button.previous }}
   </bal-button>
