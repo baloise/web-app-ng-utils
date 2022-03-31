@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.0.10](https://github.com/baloise/web-app-ng-utils/compare/v2.0.9...v2.0.10) (2022-03-31)
+
+
+### Bug Fixes
+
+* remove hidden chars ([7622296](https://github.com/baloise/web-app-ng-utils/commit/762229659b193bb2b6de908d5c8b6acdf32ed2ef))
+
+
+
 ### [2.0.9](https://github.com/baloise/web-app-ng-utils/compare/v2.0.8...v2.0.9) (2022-03-29)
 
 
