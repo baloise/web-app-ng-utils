@@ -6,14 +6,14 @@
   *ngIf="shouldShowStepOverview()"
 >
 </bal-wizard-overview>
-​
+
 <ng-content></ng-content>
-​
+
 <bal-button-group *ngIf="shouldShowNavigationButtons()" position="right">
   <bal-button color="link" data-test-id="back-button" *ngIf="shouldShowBackButton()" (click)="onClickPrevious()">
     {{ labels.button.previous }}
   </bal-button>
-  ​
+
   <bal-button
     color="primary"
     data-test-id="next-button"
