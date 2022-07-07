@@ -1,12 +1,11 @@
 {
-  "version": "2.0.16",
+  "version": "2.0.17-beta.0",
   "packages": [
     "projects/lib"
   ],
   "command": {
     "version": {
       "message": "chore(release): %s",
-      "allowBranch": "master",
       "conventionalCommits": true,
       "changelogPreset": "conventionalcommits",
       "createRelease": "github",
