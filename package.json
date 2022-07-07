@@ -17,7 +17,7 @@
     "update:registry": "lerna run update:registry && sed -i -e \"s#nexus.balgroupit.com/repository/npm#registry.npmjs.org#g\" package-lock.json\n",
     "postinstall": "npm run copy:fonts",
     "copy:fonts": "copyfiles --flat node_modules/@baloise/design-system-next-fonts/lib/* projects/demo/src/assets",
-    "release:canary": "lerna version prepatch --preid beta --yes --no-git-tag-version && npm run release:beta"
+    "release:canary": "lerna version prepatch --preid beta --yes --no-git-tag-version && npm run build && npm run release:beta"
   },
   "private": true,
   "dependencies": {
