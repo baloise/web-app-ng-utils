@@ -1,9 +1,10 @@
 <div class="form-navigation">
   <bal-tabs expanded clickable interface="o-steps" [value]="activeStep.name">
     <bal-tab-item
-      *ngFor="let step of getVisibleSteps(); let i = index"
+      *ngFor="let step of _steps"
       [label]="step.label"
       [value]="step.name"
+      [hidden]="!step.visible || !step.enabled"
       [done]="isDone(step)"
       [disabled]="shouldMarkAsDisabled(step)"
       (balNavigate)="clickOnStep.emit(step)"
