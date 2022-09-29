@@ -46,3 +46,4 @@ Thumbs.db
 .husky/_/
 
 projects/demo/src/assets
+projects/lib/dist

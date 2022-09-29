@@ -1,6 +1,5 @@
 {
   "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/web-app-ng-utils",
   "lib": {
     "entryFile": "src/public-api.ts"
   }

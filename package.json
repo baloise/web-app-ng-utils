@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && rimraf projects/lib/dist/package.json",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "format:check": "prettier --check ./projects",
@@ -13,6 +13,7 @@
     "precommit": "lint-staged --allow-empty",
     "link": "cd dist && npm link",
     "release": "cd dist && npm publish",
+    "release:canary": "lerna publish prepatch --canary --preid beta --dist-tag beta --yes --no-changelog",
     "update:registry": "lerna run update:registry && sed -i -e \"s#nexus.balgroupit.com/repository/npm#registry.npmjs.org#g\" package-lock.json\n",
     "postinstall": "npm run copy:fonts",
     "copy:fonts": "copyfiles --flat node_modules/@baloise/design-system-next-fonts/lib/* projects/demo/src/assets"
@@ -62,6 +63,7 @@
     "lint-staged": "^12.3.4",
     "ng-packagr": "^14.0.0",
     "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
     "typescript": "~4.6.2"
   }
 }
