@@ -15,7 +15,7 @@
     "release": "cd dist && npm publish",
     "update:registry": "lerna run update:registry && sed -i -e \"s#nexus.balgroupit.com/repository/npm#registry.npmjs.org#g\" package-lock.json\n",
     "postinstall": "npm run copy:fonts",
-    "copy:fonts": "copyfiles --flat node_modules/@baloise/design-system-fonts/lib/* projects/demo/src/assets"
+    "copy:fonts": "copyfiles --flat node_modules/@baloise/design-system-next-fonts/lib/* projects/demo/src/assets"
   },
   "private": true,
   "dependencies": {
