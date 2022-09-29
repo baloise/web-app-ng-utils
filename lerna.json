@@ -6,6 +6,7 @@
   "command": {
     "version": {
       "message": "chore(release): %s",
+      "allowBranch": "master",
       "conventionalCommits": true,
       "changelogPreset": "conventionalcommits",
       "createRelease": "github",
