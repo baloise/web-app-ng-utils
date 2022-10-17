@@ -3,7 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-### [2.0.19-beta.0](https://github.com/baloise/web-app-ng-utils/compare/v2.0.17-beta.0...v2.0.19-beta.0) (2022-07-07)
+### [2.1.1](https://github.com/baloise/web-app-ng-utils/compare/v2.1.0...v2.1.1) (2022-09-14)
+
+
+### Bug Fixes
+
+* **form:** async validators ([eb8b079](https://github.com/baloise/web-app-ng-utils/commit/eb8b0792239a0303f0de23d76174024a4d683a4f))
+
+
+
+## [2.1.0](https://github.com/baloise/web-app-ng-utils/compare/v2.0.17...v2.1.0) (2022-08-16)
 
 **Note:** Version bump only for package @baloise/web-app-ng-utils
 
@@ -11,20 +20,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-### [2.0.18-beta.0](https://github.com/baloise/web-app-ng-utils/compare/v2.0.17-beta.0...v2.0.18-beta.0) (2022-07-07)
-
-**Note:** Version bump only for package @baloise/web-app-ng-utils
+### [2.0.17](https://github.com/baloise/web-app-ng-utils/compare/v2.0.16...v2.0.17) (2022-08-16)
 
 
+### Bug Fixes
 
-
-
-### [2.0.17-beta.0](https://github.com/baloise/web-app-ng-utils/compare/v2.0.16...v2.0.17-beta.0) (2022-07-07)
-
-
-### Features
-
-* add next ([f9ce3bf](https://github.com/baloise/web-app-ng-utils/commit/f9ce3bf64f2ab764a6a82f773a4c1d6397a3b641))
+* order of wizard steps ([abfa95c](https://github.com/baloise/web-app-ng-utils/commit/abfa95caf489c8a31ebbf9027b698cacc08233c2))
 
 
 

@@ -16,7 +16,7 @@
     "release:beta": "cd dist && npm publish --tag beta",
     "update:registry": "lerna run update:registry && sed -i -e \"s#nexus.balgroupit.com/repository/npm#registry.npmjs.org#g\" package-lock.json\n",
     "postinstall": "npm run copy:fonts",
-    "copy:fonts": "copyfiles --flat node_modules/@baloise/design-system-next-fonts/lib/* projects/demo/src/assets",
+    "copy:fonts": "copyfiles --flat node_modules/@baloise/design-system-fonts/lib/* projects/demo/src/assets",
     "release:canary": "lerna version prepatch --preid beta --yes --no-git-tag-version && npm run build && npm run release:beta"
   },
   "private": true,
@@ -29,7 +29,7 @@
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
-    "@baloise/design-system-next-components-angular": "^10.14.0",
+    "@baloise/design-system-components-angular": "^11.0.0",
     "@baloise/web-app-google-utils": "^1.2.0",
     "@baloise/web-app-ng-utils": "^2.0.0-alpha.0",
     "lodash.isboolean": "^3.0.3",
