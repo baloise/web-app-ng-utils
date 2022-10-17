@@ -5,7 +5,7 @@
     "@angular/common": ">=12.0.0",
     "@angular/core": ">=12.0.0",
     "@angular/forms": ">=12.0.0",
-    "@baloise/design-system-next-components-angular": ">=10.15.2-beta.2",
+    "@baloise/design-system-components-angular": ">=11.0.0",
     "@baloise/web-app-google-utils": ">=1.2.0",
     "query-string": ">=7.0.0"
   },

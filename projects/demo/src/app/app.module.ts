@@ -11,7 +11,7 @@ import {
   BalHeadingModule,
   BalFieldModule,
   BalInputModule,
-} from '@baloise/design-system-next-components-angular'
+} from '@baloise/design-system-components-angular'
 import { BalNgFormWizardModule } from '../../../lib/src/public-api'
 
 import { AppComponent } from './app.component'
