@@ -10,7 +10,6 @@ import { WizardStep } from '../models'
 @Component({
   selector: 'bal-wizard-overview',
   templateUrl: './wizard-overview.component.html',
-  styleUrls: ['./wizard-overview.component.scss']
 })
 export class WizardOverviewComponent implements OnInit {
   @Input() activeStep!: WizardStep

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
-import { WizardStep } from '../../../baloise/lib/src/lib/form/form-wizard/models'
-import { FormWizardComponent } from '../../../baloise/lib/src/public-api'
+import {WizardStep} from "../../../lib/src/form/form-wizard/models";
+import {FormWizardComponent} from "../../../lib/src/form/form-wizard/form-wizard.component";
 
 @Component({
   selector: 'app-home',

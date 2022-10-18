@@ -25,7 +25,6 @@ const URL_PARAM_STEP = 'step'
 @Component({
   selector: 'bal-form-wizard',
   templateUrl: 'form-wizard.component.html',
-  styleUrls: ['form-wizard.component.scss'],
 })
 export class FormWizardComponent implements OnInit, OnChanges, AfterContentInit, OnDestroy {
   @Input() steps: WizardStep[] = []

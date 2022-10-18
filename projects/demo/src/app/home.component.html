@@ -21,7 +21,7 @@
         (submitForm)="submitForm($event)"
       >
         <bal-wizard-step [name]="steps[0].name">
-          <div *ngIf="isStep(0)">
+          <div *ngIf="isStep(0) && steps[0].form">
             <form [formGroup]="steps[0].form" novalidate class="columns is-multiline mt-0">
               <bal-field class="column is-full py-0" required>
                 <bal-field-label>Firstname</bal-field-label>
@@ -46,7 +46,7 @@
         </bal-wizard-step>
 
         <bal-wizard-step [name]="steps[1].name">
-          <div *ngIf="isStep(1)">
+          <div *ngIf="isStep(1) && steps[1].form">
             <form [formGroup]="steps[1].form" novalidate class="columns is-multiline mt-0">
               <bal-field class="column is-full py-0" required>
                 <bal-field-label>Street</bal-field-label>
