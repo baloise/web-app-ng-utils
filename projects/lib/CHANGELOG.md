@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.0](https://github.com/baloise/web-app-ng-utils/compare/v2.1.1...v3.0.0) (2022-10-18)
+
+
+### Features
+
+* next ([b47670b](https://github.com/baloise/web-app-ng-utils/commit/b47670b081b7f387d613a1657c3603005d4b87b9))
+* update to version 11 of the DS ([b641b10](https://github.com/baloise/web-app-ng-utils/commit/b641b10407dc8b3ad2ecefc0978db97b6ad00f73))
+
+
+### Bug Fixes
+
+* angular14 and new next version ([384ef64](https://github.com/baloise/web-app-ng-utils/commit/384ef645d39d994e7cce7b26b8fabaa02e6b9f32))
+* fix version of lib ([9eae61d](https://github.com/baloise/web-app-ng-utils/commit/9eae61d21ac2800b5e1d9bb6c841c82e6b3e5f98))
+* update peer dependecies and demo app ([558cd11](https://github.com/baloise/web-app-ng-utils/commit/558cd118b90557f201ecce54efd969fb3fb460c6))
+
+### 2.0.16 (2022-04-05)
+
+
+
 ### [2.1.1](https://github.com/baloise/web-app-ng-utils/compare/v2.1.0...v2.1.1) (2022-09-14)
 
 
