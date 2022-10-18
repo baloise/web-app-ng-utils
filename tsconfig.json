@@ -2,9 +2,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "paths": {
-      "@baloise/web-app-ng-utils": ["dist"]
-    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
