@@ -46,6 +46,7 @@ export class FormWizardComponent implements OnInit, OnChanges, AfterContentInit,
   @Output() navigateBackward = new EventEmitter<WizardStep>()
   @Output() navigationFailed = new EventEmitter<void>()
   @Output() submitForm = new EventEmitter<FormGroup | null>()
+  @Output() clickOnStep: EventEmitter<WizardStep> = new EventEmitter<WizardStep>()
 
   @ContentChildren(WizardStepComponent)
   stepComponents!: QueryList<WizardStepComponent>
@@ -289,5 +290,6 @@ export class FormWizardComponent implements OnInit, OnChanges, AfterContentInit,
     // enable direct backward navigation
     this.activeStep = clickedStep
     this.showActiveStepComponent()
+    this.clickOnStep.emit(clickedStep)
   }
 }
