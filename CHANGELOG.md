@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [3.0.1](https://github.com/baloise/web-app-ng-utils/compare/v3.0.0...v3.0.1) (2022-10-19)
+
+
+### Bug Fixes
+
+* emit click on step from form-wizzard ([1e278f1](https://github.com/baloise/web-app-ng-utils/commit/1e278f1e3c47be7f127dfff812aa5d158c8260bd))
+* fix release job ([6d10529](https://github.com/baloise/web-app-ng-utils/commit/6d1052974521f75fcba99d63bc28cbbe4f618470))
+
+
+
 ## [3.0.0](https://github.com/baloise/web-app-ng-utils/compare/v2.1.1...v3.0.0) (2022-10-18)
 
 
