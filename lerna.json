@@ -1,20 +1,21 @@
 {
   "version": "3.0.1",
-  "packages": [
-    "projects/lib"
-  ],
+  "granularPathspec": false,
+  "packages": ["packages/*"],
   "command": {
     "version": {
-      "message": "chore(release): %s",
-      "allowBranch": "master",
-      "conventionalCommits": true,
-      "changelogPreset": "conventionalcommits",
-      "createRelease": "github",
-      "exact": true,
-      "forcePublish": true
-    },
-    "publish": {
-      "tempTag": true
+      "message": "chore(release): publish %s"
     }
-  }
+  },
+  "ignoreChanges": [
+    ".build/**",
+    ".github/**",
+    ".husky/**",
+    "**/.build/**",
+    "**/generated/**",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.e2e.ts",
+    "**/*.md"
+  ]
 }
