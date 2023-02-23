@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && rimraf projects/lib/dist/package.json",
+    "build": "lerna run build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "format:check": "prettier --check ./projects",
@@ -12,8 +12,9 @@
     "prepare": "husky install",
     "precommit": "lint-staged --allow-empty",
     "link": "cd dist && npm link",
-    "release": "cd dist && npm publish",
-    "release:canary": "lerna publish prepatch --canary --preid beta --dist-tag beta --yes --no-changelog",
+    "update:lock": "lerna exec -- npm install --package-lock-only",
+    "release": "lerna publish --conventional-commits --exact --force-publish --yes",
+    "release:canary": "lerna publish prepatch --canary --preid beta --dist-tag beta --exact --force-publish --yes --no-changelog",
     "update:registry": "lerna run update:registry && sed -i -e \"s#nexus.balgroupit.com/repository/npm#registry.npmjs.org#g\" package-lock.json\n",
     "postinstall": "npm run copy:fonts",
     "copy:fonts": "copyfiles --flat node_modules/@baloise/design-system-fonts/lib/* projects/demo/src/assets"
