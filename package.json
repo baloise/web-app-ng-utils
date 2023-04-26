@@ -15,9 +15,7 @@
     "update:lock": "lerna exec -- npm install --package-lock-only",
     "release": "lerna publish --conventional-commits --exact --force-publish --yes",
     "release:canary": "lerna publish prepatch --canary --preid beta --dist-tag beta --exact --force-publish --yes --no-changelog",
-    "update:registry": "lerna run update:registry && sed -i -e \"s#nexus.balgroupit.com/repository/npm#registry.npmjs.org#g\" package-lock.json\n",
-    "postinstall": "npm run copy:fonts",
-    "copy:fonts": "copyfiles --flat node_modules/@baloise/design-system-fonts/lib/* projects/demo/src/assets"
+    "update:registry": "lerna run update:registry && sed -i -e \"s#nexus.balgroupit.com/repository/npm#registry.npmjs.org#g\" package-lock.json\n"
   },
   "private": true,
   "dependencies": {
@@ -29,7 +27,7 @@
     "@angular/platform-browser": "~14.2.4",
     "@angular/platform-browser-dynamic": "~14.2.4",
     "@angular/router": "~14.2.4",
-    "@baloise/design-system-components-angular": "^11.0.0",
+    "@baloise/design-system-components-angular": "0.0.0-snapshot-20230426140802",
     "@baloise/web-app-google-utils": "^1.2.0",
     "lodash.isboolean": "^3.0.3",
     "lodash.isequal": "^4.5.0",
@@ -53,7 +51,6 @@
     "@types/lodash.isstring": "^4.0.6",
     "@types/node": "^12.11.1",
     "conventional-changelog-conventionalcommits": "^4.6.3",
-    "copyfiles": "^2.4.1",
     "husky": "^7.0.4",
     "jasmine-core": "~3.10.0",
     "karma": "~6.3.0",

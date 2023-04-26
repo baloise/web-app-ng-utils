@@ -4,14 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { CommonModule } from '@angular/common'
 import { AppRoutingModule } from './app-routing.module'
 
-import {
-  BalCoreModule,
-  BalCardModule,
-  BalButtonModule,
-  BalHeadingModule,
-  BalFieldModule,
-  BalInputModule,
-} from '@baloise/design-system-components-angular'
+import { BaloiseDesignSystemModule } from '@baloise/design-system-components-angular'
 import { BalNgFormWizardModule } from '../../../lib/src/public-api'
 
 import { AppComponent } from './app.component'
@@ -26,12 +19,7 @@ import { HomeComponent } from './home.component'
     ReactiveFormsModule,
     AppRoutingModule,
     BalNgFormWizardModule,
-    BalCoreModule.forRoot(),
-    BalCardModule,
-    BalButtonModule,
-    BalHeadingModule,
-    BalFieldModule,
-    BalInputModule,
+    BaloiseDesignSystemModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
