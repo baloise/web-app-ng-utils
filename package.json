@@ -27,7 +27,7 @@
     "@angular/platform-browser": "~14.2.4",
     "@angular/platform-browser-dynamic": "~14.2.4",
     "@angular/router": "~14.2.4",
-    "@baloise/design-system-components-angular": "0.0.0-snapshot-20230426140802",
+    "@baloise/design-system-components-angular": "0.0.0-snapshot-20230502111202",
     "@baloise/web-app-google-utils": "^1.2.0",
     "lodash.isboolean": "^3.0.3",
     "lodash.isequal": "^4.5.0",
