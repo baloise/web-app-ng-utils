@@ -1,6 +1,6 @@
 <div class="form-navigation">
-  <bal-tabs expanded clickable interface="o-steps" [value]="activeStep.name">
-    <bal-tab-item
+  <bal-steps expanded clickable [value]="activeStep.name">
+    <bal-step-item
       *ngFor="let step of _steps"
       [label]="step.label"
       [value]="step.name"
@@ -8,6 +8,6 @@
       [done]="isDone(step)"
       [disabled]="shouldMarkAsDisabled(step)"
       (balNavigate)="clickOnStep.emit(step)"
-    ></bal-tab-item>
-  </bal-tabs>
+    ></bal-step-item>
+  </bal-steps>
 </div>

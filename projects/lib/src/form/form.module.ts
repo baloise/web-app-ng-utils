@@ -4,11 +4,12 @@ import { FormWizardComponent } from './form-wizard/form-wizard.component'
 import { WizardOverviewComponent } from './form-wizard/wizard-overview/wizard-overview.component'
 import { WizardStepComponent } from './form-wizard/wizard-step/wizard-step.component'
 import { BrowserModule } from '@angular/platform-browser'
-import { BalTabsModule, BalButtonModule, BalNotificationModule } from '@baloise/design-system-components-angular'
+import { BaloiseDesignSystemModule } from '@baloise/design-system-components-angular'
 
 const components = [FormWizardComponent, WizardOverviewComponent, WizardStepComponent]
+
 @NgModule({
-  imports: [CommonModule, BrowserModule, BalTabsModule, BalButtonModule, BalNotificationModule],
+  imports: [CommonModule, BrowserModule, BaloiseDesignSystemModule],
   declarations: [...components],
   exports: [...components],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

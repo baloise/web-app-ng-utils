@@ -1,10 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  OnInit,
-  Output,
-} from '@angular/core'
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
 import { WizardStep } from '../models'
 
 @Component({
@@ -22,7 +16,7 @@ export class WizardOverviewComponent implements OnInit {
 
   @Input()
   set steps(steps: WizardStep[]) {
-    this._steps = steps;
+    this._steps = steps
   }
 
   ngOnInit(): void {

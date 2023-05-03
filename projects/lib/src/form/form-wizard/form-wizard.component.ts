@@ -13,7 +13,7 @@ import {
 } from '@angular/core'
 import { FormGroup } from '@angular/forms'
 import { NavigationEnd, Router, RouterEvent } from '@angular/router'
-import {first, Subscription} from 'rxjs'
+import { first, Subscription } from 'rxjs'
 import { parse } from 'query-string'
 import { isNumber } from 'lodash'
 import { BalFormWrapper } from '../form-wrapper'
@@ -74,7 +74,7 @@ export class FormWizardComponent implements OnInit, OnChanges, AfterContentInit,
       const formMap: { [stepName: string]: FormGroup } = {}
       this.steps.forEach(step => {
         if (formMap !== undefined && formMap[step.name] !== undefined) {
-          (formMap as any)[step.name] = step.form
+          ;(formMap as any)[step.name] = step.form
         }
       })
       this.form = new FormGroup(formMap)
@@ -116,23 +116,23 @@ export class FormWizardComponent implements OnInit, OnChanges, AfterContentInit,
   }
 
   goForward(): void {
-    const formWrapper = new BalFormWrapper(this.form);
-    let activeForm = this.activeStep.form;
+    const formWrapper = new BalFormWrapper(this.form)
+    let activeForm = this.activeStep.form
 
     if (activeForm) {
-      formWrapper.validateAllFields(activeForm);
+      formWrapper.validateAllFields(activeForm)
     } else {
-      formWrapper.validateAllFields();
-      activeForm = this.form;
+      formWrapper.validateAllFields()
+      activeForm = this.form
     }
 
     if (activeForm.pending) {
       // wait for async validators
       activeForm.statusChanges
-                .pipe(first())
-                .subscribe(() => this.checkValidationResultAndPerformAction(activeForm, formWrapper));
+        .pipe(first())
+        .subscribe(() => this.checkValidationResultAndPerformAction(activeForm, formWrapper))
     } else {
-      this.checkValidationResultAndPerformAction(activeForm, formWrapper);
+      this.checkValidationResultAndPerformAction(activeForm, formWrapper)
     }
   }
 
@@ -141,7 +141,7 @@ export class FormWizardComponent implements OnInit, OnChanges, AfterContentInit,
       this.beforeNavigateForward.emit(this.activeStep)
       this.goForwardWithoutValidation()
       formWrapper.unvalidateAllFields()
-      this.navigateForward.emit(this.activeStep);
+      this.navigateForward.emit(this.activeStep)
 
       if (this.activeStepIsLastStep()) {
         formWrapper.validateAllFields()
