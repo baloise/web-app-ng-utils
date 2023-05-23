@@ -1,4 +1,4 @@
-<bal-stack class="form-navigation" align="center" space="x-large">
+<div class="form-navigation">
   <bal-steps expanded clickable [value]="activeStep.name">
     <bal-step-item
       *ngFor="let step of _steps"
@@ -10,4 +10,4 @@
       (balNavigate)="clickOnStep.emit(step)"
     ></bal-step-item>
   </bal-steps>
-</bal-stack>
+</div>
