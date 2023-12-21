@@ -1,7 +1,9 @@
 {
-  "version": "4.0.2",
+  "version": "4.0.3",
   "granularPathspec": false,
-  "packages": ["projects/lib"],
+  "packages": [
+    "projects/lib"
+  ],
   "command": {
     "version": {
       "message": "chore(release): publish %s"
