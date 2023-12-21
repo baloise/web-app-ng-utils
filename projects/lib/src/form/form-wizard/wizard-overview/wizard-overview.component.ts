@@ -16,7 +16,9 @@ export class WizardOverviewComponent implements OnInit {
 
   @Input()
   set steps(steps: WizardStep[]) {
-    this._steps = steps
+    // TODO: remove when https://github.com/baloise/design-system/issues/1246 is resolved
+    // step.filter() was added as a workaround to fix an issue introduced with Design System 15.0.2
+    this._steps = steps.filter(s => s.visible && s.enabled)
   }
 
   ngOnInit(): void {
