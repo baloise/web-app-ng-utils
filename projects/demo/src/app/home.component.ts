@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
-import {WizardStep} from "../../../lib/src/form/form-wizard/models";
-import {FormWizardComponent} from "../../../lib/src/form/form-wizard/form-wizard.component";
+import { WizardStep } from '../../../lib/src/form/form-wizard/models'
+import { FormWizardComponent, ValidationResult } from '../../../lib/src/form/form-wizard/form-wizard.component'
+import { of } from 'rxjs'
 
 @Component({
   selector: 'app-home',
@@ -52,6 +53,10 @@ export class HomeComponent implements OnInit {
     },
   ]
 
+  preNavigationValidator = (firstName: string) => {
+    return of<ValidationResult>(this.validateName(firstName))
+  }
+
   ngOnInit() {
     this.submittedData = null
   }
@@ -62,15 +67,33 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  onBeforeNavigateForward() {}
+  onBeforeNavigateForward() {
+  }
 
-  onNavigateForward(e: WizardStep) {}
+  onNavigateForward(e: WizardStep) {
+  }
 
-  onNavigateBackward(e: WizardStep) {}
+  onNavigateBackward(e: WizardStep) {
+  }
 
-  onNavigationFailed() {}
+  onNavigationFailed(e: string) {
+    window.alert('error: ' + e)
+  }
 
   isStep(index: number): boolean {
     return this.formWizardComponent != null ? this.formWizardComponent.isStep(this.steps[index]) : index === 0
+  }
+
+  private validateName(name: string): ValidationResult {
+    return name?.indexOf('super') > -1 ?
+      {
+        isValid: true,
+      }
+      :
+      {
+        errorLabel: 'firstname should contain "super"',
+        isValid: false,
+      }
+
   }
 }

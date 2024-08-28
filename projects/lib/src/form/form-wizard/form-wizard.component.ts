@@ -13,7 +13,7 @@ import {
 } from '@angular/core'
 import { FormGroup } from '@angular/forms'
 import { NavigationEnd, Router, RouterEvent } from '@angular/router'
-import { first, Subscription } from 'rxjs'
+import { first, Observable, Subscription } from 'rxjs'
 import { parse } from 'query-string'
 import { isNumber } from 'lodash'
 import { BalFormWrapper } from '../form-wrapper'
@@ -21,6 +21,12 @@ import { WizardStep } from './models'
 import { WizardStepComponent } from './wizard-step/wizard-step.component'
 
 const URL_PARAM_STEP = 'step'
+
+export interface ValidationResult {
+  errorLabel?: string;
+  isValid: boolean;
+}
+
 
 @Component({
   selector: 'bal-form-wizard',
@@ -40,11 +46,12 @@ export class FormWizardComponent implements OnInit, OnChanges, AfterContentInit,
   }
   @Input() disableStepsAfterActiveStep = false
   @Input() enableDirectNavigationBackward = false
+  @Input() beforeNavigateForwardValidation: Observable<ValidationResult> | undefined
 
   @Output() beforeNavigateForward = new EventEmitter<WizardStep>()
   @Output() navigateForward = new EventEmitter<WizardStep>()
   @Output() navigateBackward = new EventEmitter<WizardStep>()
-  @Output() navigationFailed = new EventEmitter<void>()
+  @Output() navigationFailed = new EventEmitter<any>()
   @Output() submitForm = new EventEmitter<FormGroup | null>()
   @Output() clickOnStep: EventEmitter<WizardStep> = new EventEmitter<WizardStep>()
 
@@ -130,13 +137,26 @@ export class FormWizardComponent implements OnInit, OnChanges, AfterContentInit,
       // wait for async validators
       activeForm.statusChanges
         .pipe(first())
-        .subscribe(() => this.checkValidationResultAndPerformAction(activeForm, formWrapper))
+        .subscribe(() => this.beforeValidateCheckValidationResultAndPerformAction(activeForm, formWrapper))
+    } else {
+      this.beforeValidateCheckValidationResultAndPerformAction(activeForm, formWrapper)
+    }
+  }
+
+  private beforeValidateCheckValidationResultAndPerformAction(activeForm: FormGroup | undefined, formWrapper: BalFormWrapper) {
+    if (this.beforeNavigateForwardValidation) {
+      this.subscriptions.push(this.beforeNavigateForwardValidation.subscribe(
+        (validationResult) => validationResult.isValid ?
+          this.checkValidationResultAndPerformAction(activeForm, formWrapper) :
+          this.navigationFailed.emit(validationResult.errorLabel),
+        (e) => this.navigationFailed.emit(e),
+      ))
     } else {
       this.checkValidationResultAndPerformAction(activeForm, formWrapper)
     }
   }
 
-  private checkValidationResultAndPerformAction(activeForm: FormGroup | undefined, formWrapper: BalFormWrapper) {
+  private checkValidationResultAndPerformAction(activeForm: FormGroup<any> | undefined, formWrapper: BalFormWrapper) {
     if (activeForm && activeForm.valid) {
       this.beforeNavigateForward.emit(this.activeStep)
       this.goForwardWithoutValidation()

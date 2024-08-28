@@ -2,6 +2,7 @@
   <bal-card>
     <bal-card-content>
       <bal-form-wizard
+        [beforeNavigateForwardValidation]="preNavigationValidator(steps[0].form?.get(firstName)?.value)"
         *ngIf="submittedData == null"
         [steps]="steps"
         [labels]="{
@@ -17,7 +18,7 @@
         (beforeNavigateForward)="onBeforeNavigateForward()"
         (navigateForward)="onNavigateForward($event)"
         (navigateBackward)="onNavigateBackward($event)"
-        (navigationFailed)="onNavigationFailed()"
+        (navigationFailed)="onNavigationFailed($event)"
         (submitForm)="submitForm($event)"
       >
         <bal-wizard-step [name]="steps[0].name">
