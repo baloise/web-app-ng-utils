@@ -51,7 +51,7 @@ export class FormWizardComponent implements OnInit, OnChanges, AfterContentInit,
   @Output() beforeNavigateForward = new EventEmitter<WizardStep>()
   @Output() navigateForward = new EventEmitter<WizardStep>()
   @Output() navigateBackward = new EventEmitter<WizardStep>()
-  @Output() navigationFailed = new EventEmitter<string>()
+  @Output() navigationFailed = new EventEmitter<any>()
   @Output() submitForm = new EventEmitter<FormGroup | null>()
   @Output() clickOnStep: EventEmitter<WizardStep> = new EventEmitter<WizardStep>()
 
@@ -145,12 +145,12 @@ export class FormWizardComponent implements OnInit, OnChanges, AfterContentInit,
 
   private beforeValidateCheckValidationResultAndPerformAction(activeForm: FormGroup | undefined, formWrapper: BalFormWrapper) {
     if (this.beforeNavigateForwardValidation) {
-      this.beforeNavigateForwardValidation.subscribe(
+      this.subscriptions.push(this.beforeNavigateForwardValidation.subscribe(
         (validationResult) => validationResult.isValid ?
           this.checkValidationResultAndPerformAction(activeForm, formWrapper) :
           this.navigationFailed.emit(validationResult.errorLabel),
-        () => this.navigationFailed.emit(),
-      )
+        (e) => this.navigationFailed.emit(e),
+      ))
     } else {
       this.checkValidationResultAndPerformAction(activeForm, formWrapper)
     }
