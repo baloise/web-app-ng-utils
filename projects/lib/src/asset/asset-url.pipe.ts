@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core'
 import { AssetConfigProviderService } from './asset-config.provider.service'
 
 @Pipe({
-  name: 'balAssetUrl',
+    name: 'balAssetUrl',
+    standalone: false
 })
 export class AssetUrlPipe implements PipeTransform {
   private applicationContextPath = ''

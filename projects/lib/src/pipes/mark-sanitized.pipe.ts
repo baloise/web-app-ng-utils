@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core'
 import { DomSanitizer, SafeHtml, SafeResourceUrl, SafeScript, SafeStyle, SafeUrl } from '@angular/platform-browser'
 
 @Pipe({
-  name: 'balSafe',
+    name: 'balSafe',
+    standalone: false
 })
 export class MarkSanitizedPipe implements PipeTransform {
   constructor(private domSanitizer: DomSanitizer) {}

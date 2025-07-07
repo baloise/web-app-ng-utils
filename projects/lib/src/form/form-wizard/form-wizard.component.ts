@@ -29,8 +29,9 @@ export interface ValidationResult {
 
 
 @Component({
-  selector: 'bal-form-wizard',
-  templateUrl: 'form-wizard.component.html',
+    selector: 'bal-form-wizard',
+    templateUrl: 'form-wizard.component.html',
+    standalone: false
 })
 export class FormWizardComponent implements OnInit, OnChanges, AfterContentInit, OnDestroy {
   @Input() steps: WizardStep[] = []
