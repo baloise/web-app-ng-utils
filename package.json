@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "lerna run build && ng build",
+    "build": "lerna run build && ng build @baloise/web-app-ng-utils",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "format:check": "prettier --check ./projects",
