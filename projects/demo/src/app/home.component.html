@@ -23,8 +23,8 @@
       >
         <bal-wizard-step [name]="steps[0].name">
           <div *ngIf="isStep(0) && steps[0].form">
-            <form [formGroup]="steps[0].form" novalidate class="columns is-multiline mt-0">
-              <bal-field class="column is-full py-0" required>
+            <form [formGroup]="steps[0].form" novalidate class="grid is-multiline mt-0">
+              <bal-field class="col is-full py-0" required>
                 <bal-field-label>Firstname</bal-field-label>
                 <bal-field-control>
                   <bal-input [formControlName]="firstName" placeholder="Enter your firstname"></bal-input>
@@ -33,7 +33,7 @@
                   <bal-ng-error controlName="firstName" error="required">This field is required</bal-ng-error>
                 </bal-field-message>
               </bal-field>
-              <bal-field class="column is-full py-0" required>
+              <bal-field class="col is-full py-0" required>
                 <bal-field-label>Lastname</bal-field-label>
                 <bal-field-control>
                   <bal-input [formControlName]="lastName" placeholder="Enter your lastName"></bal-input>
@@ -48,8 +48,8 @@
 
         <bal-wizard-step [name]="steps[1].name">
           <div *ngIf="isStep(1) && steps[1].form">
-            <form [formGroup]="steps[1].form" novalidate class="columns is-multiline mt-0">
-              <bal-field class="column is-full py-0" required>
+            <form [formGroup]="steps[1].form" novalidate class="grid is-multiline mt-0">
+              <bal-field class="col is-full py-0" required>
                 <bal-field-label>Street</bal-field-label>
                 <bal-field-control>
                   <bal-input [formControlName]="street" placeholder="Enter your street"></bal-input>

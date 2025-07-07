@@ -3,8 +3,7 @@ import { BrowserModule } from '@angular/platform-browser'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { CommonModule } from '@angular/common'
 import { AppRoutingModule } from './app-routing.module'
-
-import { BaloiseDesignSystemModule } from '@baloise/design-system-components-angular'
+import { BaloiseDesignSystemModule } from '@baloise/ds-angular-module'
 import { BalNgFormWizardModule } from '../../../lib/src/public-api'
 
 import { AppComponent } from './app.component'
