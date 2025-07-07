@@ -141,7 +141,6 @@
       }
     }
   },
-  "defaultProject": "@baloise/web-app-ng-utils",
   "cli": {
     "analytics": false
   }
