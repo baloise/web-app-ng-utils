@@ -7,10 +7,12 @@ import { BalNgFormWizardModule } from '../../../lib/src/public-api'
 
 import { AppComponent } from './app.component'
 import { HomeComponent } from './home.component'
+import { BrowserModule } from '@angular/platform-browser'
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
   imports: [
+    BrowserModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
