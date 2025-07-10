@@ -2,8 +2,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
 import { WizardStep } from '../models'
 
 @Component({
-  selector: 'bal-wizard-overview',
-  templateUrl: './wizard-overview.component.html',
+    selector: 'bal-wizard-overview',
+    templateUrl: './wizard-overview.component.html',
+    standalone: false
 })
 export class WizardOverviewComponent implements OnInit {
   @Input() activeStep!: WizardStep

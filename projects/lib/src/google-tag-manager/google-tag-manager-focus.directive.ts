@@ -3,7 +3,8 @@ import { GtmAction, GtmEvent } from '@baloise/web-app-google-utils'
 import { GoogleTagManagerDataService, GoogleTagManagerEvent } from './google-tag-manager.service'
 
 @Directive({
-  selector: '[balGtmFocus]',
+    selector: '[balGtmFocus]',
+    standalone: false
 })
 export class GoogleTagManagerFocusDirective {
   @Input()

@@ -3,7 +3,8 @@ import { GtmAction, GtmEvent } from '@baloise/web-app-google-utils'
 import { GoogleTagManagerEvent, GoogleTagManagerDataService } from './google-tag-manager.service'
 
 @Directive({
-  selector: '[balGtmClick]',
+    selector: '[balGtmClick]',
+    standalone: false
 })
 export class GoogleTagManagerClickDirective {
   @Input() balGtmClick!: GtmEvent

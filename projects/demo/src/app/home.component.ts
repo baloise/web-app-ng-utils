@@ -5,8 +5,9 @@ import { FormWizardComponent, ValidationResult } from '../../../lib/src/form/for
 import { of } from 'rxjs'
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    standalone: false
 })
 export class HomeComponent implements OnInit {
   @ViewChild(FormWizardComponent) formWizardComponent!: FormWizardComponent

@@ -10,7 +10,7 @@ module.exports = function (config) {
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
-      require('@angular-devkit/build-angular/plugins/karma'),
+      
     ],
     client: {
       jasmine: {
@@ -29,6 +29,9 @@ module.exports = function (config) {
       subdir: '.',
       reporters: [{ type: 'html' }, { type: 'text-summary' }],
     },
+    files: [
+      "**/*.spec.ts"
+    ],
     reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
