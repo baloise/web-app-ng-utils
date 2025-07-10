@@ -3,6 +3,7 @@
   "version": "5.0.4",
   "module": "dist/fesm2015/baloise-web-app-ng-utils.mjs",
   "types": "dist/index.d.ts",
+  "type": "module",
   "exports": {
     ".": {
       "import": "./dist/fesm2015/baloise-web-app-ng-utils.mjs",
