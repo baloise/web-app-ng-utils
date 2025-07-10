@@ -1,6 +1,15 @@
 {
   "name": "@baloise/web-app-ng-utils",
   "version": "5.0.1",
+  "module": "dist/fesm2015/baloise-web-app-ng-utils.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/fesm2015/baloise-web-app-ng-utils.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "gitHead": "c59d4b06fc6cb8aa6212337b2b26d14049963210",
   "peerDependencies": {
     "@angular/common": ">=20.0.6",
     "@angular/core": ">=20.0.6",
@@ -17,12 +26,5 @@
   },
   "files": [
     "dist/"
-  ],
-  "module": "dist/fesm2015/baloise-web-app-ng-utils.mjs",
-  "es2020": "dist/fesm2020/baloise-web-app-ng-utils.mjs",
-  "esm2020": "dist/esm2020/baloise-web-app-ng-utils.mjs",
-  "fesm2020": "dist/fesm2020/baloise-web-app-ng-utils.mjs",
-  "fesm2015": "dist/fesm2015/baloise-web-app-ng-utils.mjs",
-  "typings": "dist/index.d.ts",
-  "gitHead": "c59d4b06fc6cb8aa6212337b2b26d14049963210"
+  ]
 }
