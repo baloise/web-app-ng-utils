@@ -1,6 +1,6 @@
 {
   "name": "@baloise/web-app-ng-utils",
-  "version": "5.0.3",
+  "version": "5.0.4",
   "module": "dist/fesm2015/baloise-web-app-ng-utils.mjs",
   "types": "dist/index.d.ts",
   "exports": {
