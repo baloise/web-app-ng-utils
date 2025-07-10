@@ -5,10 +5,11 @@
   "exports": {
     ".": {
       "import": "./dist/fesm2015/baloise-web-app-ng-utils.mjs",
+      "default": "./dist/fesm2015/baloise-web-app-ng-utils.mjs",
       "types": "./dist/index.d.ts"
     }
   },
-  "typings": "dist/index.d.ts",
+  "module": "dist/fesm2015/baloise-web-app-ng-utils.mjs",
   "gitHead": "c59d4b06fc6cb8aa6212337b2b26d14049963210",
   "peerDependencies": {
     "@angular/common": ">=20.0.6",
