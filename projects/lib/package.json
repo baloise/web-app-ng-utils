@@ -1,6 +1,6 @@
 {
   "name": "@baloise/web-app-ng-utils",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "peerDependencies": {
     "@angular/common": ">=14.2.4",
     "@angular/core": ">=14.2.4",
